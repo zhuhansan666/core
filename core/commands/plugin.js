@@ -158,7 +158,7 @@ ${pinfo.join('\n')}
     }
     if (secondCmd === 'on') {
         if (!pname) {
-            return reply('/plugin add <name>');
+            return reply('/plugin on <name>');
         }
         const targetPluginPath = await (0, plugin_1.getPluginPathByName)(pname);
         if (!targetPluginPath) {
@@ -179,7 +179,7 @@ ${pinfo.join('\n')}
     }
     if (secondCmd === 'off') {
         if (!pname) {
-            return reply('/plugin add <name>');
+            return reply('/plugin off <name>');
         }
         const plugin = start_1.plugins.get(pname);
         if (!plugin) {
@@ -202,7 +202,7 @@ ${pinfo.join('\n')}
     }
     if (secondCmd === 'reload') {
         if (!pname) {
-            return reply('/plugin add <name>');
+            return reply('/plugin reload <name>');
         }
         const plugin = start_1.plugins.get(pname);
         const targetPluginPath = await (0, plugin_1.getPluginPathByName)(pname);
